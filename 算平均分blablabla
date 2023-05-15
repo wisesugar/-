@@ -1,0 +1,19 @@
+import numpy as np
+t=10
+a=[]
+b,s=0,0
+for i in range(t):
+    n=eval(input())
+    if n>=60:
+        b+=1
+    if 0<=n<=100:
+        a.append(n)
+        s+=n
+    else:
+        print("错误")
+        exit()
+a.sort()
+ave=s/t
+z=(a[4]+a[5])/2
+std=np.std(a)
+print(f"平均值为：{ave}中位数为：{z}标准差为：{std}及格率为：{b*10}%")
